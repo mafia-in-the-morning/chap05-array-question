@@ -24,6 +24,28 @@ public class Application1 {
 		 * -- 출력 예시 --
 		 * 양수 혹은 홀수만 입력해야 합니다.
 		 */
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("홀수인 양의 정수를 입력하세요: ");
+		int n = scanner.nextInt();
+
+		if (n % 2 == 0 || n < 1) {
+			System.out.println("양수 혹은 홀수만 입력해야 합니다.");
+		} else {
+			int[] arr = new int[n];
+			// 배열의 중간까지는 오름차순으로 값 넣기
+			int mid = n / 2;
+			for (int i = 0; i <= mid; i++) {
+				arr[i] = i + 1;
+			}
+			// 중간 이후부터 끝까지는 내림차순으로 값 넣기
+			for (int i = mid + 1; i < n; i++) {
+				arr[i] = n - i;
+			}
+
+			for (int i = 0; i < n; i++) {
+				System.out.print(arr[i] + " ");
+			}
+		}
 
 	}
 
