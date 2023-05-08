@@ -25,6 +25,14 @@ public class Application2 {
 		 * -- 출력 예시 --
 		 * 준비된 과일이 없습니다.
 		 * */
+		String[] fruits = {"딸기", "바나나", "복숭아", "키위", "사과"};
+
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("0부터 4까지의 정수를 입력하세요: ");
+		int index = scanner.nextInt();
+
+		System.out.println(fruits[index]);
+
 
 
 	}
