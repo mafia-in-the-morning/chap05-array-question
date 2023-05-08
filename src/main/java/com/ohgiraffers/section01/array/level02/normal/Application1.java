@@ -17,6 +17,24 @@ public class Application1 {
 		 * -- 출력 예시 --
 		 * 입력하신 문자열 helloworld에서 찾으시는 문자 l은 3개 입니다.
 		 * */
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("문자열을 입력하세요: ");
+		String str = scanner.nextLine();
+
+		// 문자열을 문자 자료형 배열로 변환
+		char[] charArray = str.toCharArray();
+		System.out.print("검색할 문자를 입력하세요: ");
+		char searchChar = scanner.next().charAt(0);
+
+		// 문자열에서 검색할 문자의 개수 구하기
+		int count = 0;
+		for (int i = 0; i < charArray.length; i++) {
+			if (charArray[i] == searchChar) {
+				count++;
+			}
+		}
+		System.out.println("입력한 문자열에서 '" + searchChar + "'의 개수는 " + count + "개 입니다.");
+
 
 	}
 
